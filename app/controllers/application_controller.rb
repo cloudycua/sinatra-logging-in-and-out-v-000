@@ -26,16 +26,16 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
+  # assigns user from database to variable using session user id
     @current_user = User.find_by_id(session[:user_id])
     if @current_user
+  # displays username and balance based on session if logged in    
       erb :account
-    else
+    else    
       erb :error
     end
   end
-  get '/account' do
-  # displays correct username and balance based on session
-  # displays a 'Log Out' link
+  
     erb :account
   end
 
