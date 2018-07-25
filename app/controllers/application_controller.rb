@@ -21,6 +21,7 @@ class ApplicationController < Sinatra::Base
   # and user is redirected to the account page view
       redirect to '/account'
     end
+  # otherwise sent to error page to reinput login info  
     erb :error
   end
 
