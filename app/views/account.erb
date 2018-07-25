@@ -8,8 +8,8 @@
   <body id="page-top">
     <!-- displays correct username and balance based on session
          displays a 'Log Out' link -->
-    <p>Welcome <%= @user.username %> !</p>
-    <p>Your balance is <%= @user.balance =>.</p>
-    <input type=submit value="Log Out">
+    <p>Welcome <%=@user.username%> !</p>
+    <p>Your balance is <%=@user.balance%>.</p>
+    <a href="sessions/logout">Log Out</a>
   </body>
 </html>
