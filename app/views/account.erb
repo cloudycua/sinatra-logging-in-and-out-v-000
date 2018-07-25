@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
     <!-- displays correct username and balance based on session
-    # displays a 'Log Out' link -->
-    
-
+         displays a 'Log Out' link -->
+    <p>Welcome <%= @user.username %> !</p>     
+    <p>Your balance is <%= @user.balance =>.</p>
+    <input type=submit value="Log Out">
   </body>
 </html>
