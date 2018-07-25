@@ -29,14 +29,11 @@ class ApplicationController < Sinatra::Base
   # assigns user from database to variable using session user id
     @current_user = User.find_by_id(session[:user_id])
     if @current_user
-  # displays username and balance based on session if logged in    
+  # displays username and balance based on session if logged in
       erb :account
-    else    
+    else
       erb :error
     end
-  end
-  
-    erb :account
   end
 
   get '/logout' do
