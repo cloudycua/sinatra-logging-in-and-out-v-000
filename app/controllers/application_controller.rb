@@ -26,6 +26,14 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
+    @current_user = User.find_by_id(session[:user_id])
+    if @current_user
+      erb :account
+    else
+      erb :error
+    end
+  end
+  get '/account' do
   # displays correct username and balance based on session
   # displays a 'Log Out' link
     erb :account
@@ -35,7 +43,7 @@ class ApplicationController < Sinatra::Base
   # clears session
     session.clear
   # redirects to homepage
-    redirect '/'
+    redirect to '/'
   end
 
 
