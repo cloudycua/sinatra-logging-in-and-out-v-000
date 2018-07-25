@@ -11,8 +11,10 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-# sets session user id to id of user found from database 
+# sets session user id to id of user found from database
 # using inputed username and password
+# displays correct username and balance based on session
+# displays 'Log Out' link
   post '/login' do
     @user = User.find_by(username: params[:username])
     session[:user_id] = @user.id
