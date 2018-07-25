@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
   # displays correct username and balance based on session
-  # displays a 'Log Out' link  
+  # displays a 'Log Out' link
     erb :account
   end
 
