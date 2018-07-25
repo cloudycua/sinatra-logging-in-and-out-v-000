@@ -18,11 +18,11 @@ class ApplicationController < Sinatra::Base
     session[:user_id] = @user.id
   # displays correct username and balance based on session
   # displays a 'Log Out' link
-    erb :account
+    
   end
 
   get '/account' do
-
+    erb :account
   end
 
   get '/logout' do
